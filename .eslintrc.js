@@ -26,7 +26,7 @@ module.exports = {
       },
     ],
     "import/prefer-default-export": "off",
-    "max-lines": ["error", { max: 100, skipBlankLines: true, skipComments: true }],
+    "max-lines": "off",
     quotes: "off",
     "no-console": "off",
     "react/no-array-index-key": "off",

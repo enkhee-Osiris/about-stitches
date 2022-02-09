@@ -1,0 +1,32 @@
+/* eslint-disable no-restricted-globals */
+export function toFiniteNumber(value: number) {
+  if (!value || isNaN(value)) {
+    return 0;
+  }
+
+  if (value === Infinity || value === -Infinity) {
+    const sign = value < 0 ? -1 : 1;
+
+    return sign * Number.MAX_SAFE_INTEGER;
+  }
+
+  return value;
+}
+
+export default function clamp(number: number, lower?: number, upper?: number) {
+  if (isNaN(number)) {
+    return NaN;
+  }
+
+  let finiteNumber = toFiniteNumber(number);
+
+  if (upper !== undefined) {
+    finiteNumber = finiteNumber <= upper ? finiteNumber : upper;
+  }
+
+  if (lower !== undefined) {
+    finiteNumber = finiteNumber >= lower ? finiteNumber : lower;
+  }
+
+  return finiteNumber;
+}
