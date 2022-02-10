@@ -1,5 +1,6 @@
 import buttonStyleUrl from "./codes/button-style.svg?url";
-import { Button, StitchesLogo } from "./components";
+import buttonVariantsUrl from "./codes/button-variants.svg?url";
+import { Button, ButtonWithVariants, StitchesLogo } from "./components";
 import {
   Appear,
   Box,
@@ -217,13 +218,49 @@ function App() {
 
       <Slide>
         <Grid width="100%" gridTemplateColumns="50% 50%" gridTemplateRows="100%" height="100%">
-          <img src={buttonStyleUrl} alt="Button Usage Example" height="100%" />
+          <Appear>
+            <img src={buttonStyleUrl} alt="Button Usage Example" height="100%" />
+          </Appear>
 
           <FlexBox flexDirection="column">
-            <Button css={{ width: 185 }}>Normal Button</Button>
-            <Button css={{ marginTop: "16px", width: 185 }} className="custom-class">
-              CustomCSS Button
-            </Button>
+            <Appear>
+              <Button css={{ width: 185 }}>Normal Button</Button>
+            </Appear>
+            <Appear>
+              <Button css={{ marginTop: "16px", width: 185 }} className="custom-class">
+                CustomCSS Button
+              </Button>
+            </Appear>
+          </FlexBox>
+        </Grid>
+      </Slide>
+
+      <Slide>
+        <Grid width="100%" gridTemplateColumns="50% 50%" gridTemplateRows="100%" height="100%">
+          <Appear>
+            <img src={buttonVariantsUrl} alt="Button Usage Example" height="100%" />
+          </Appear>
+
+          <FlexBox flexDirection="column">
+            <Appear>
+              <ButtonWithVariants size="small" shape="round" css={{ width: 185 }}>
+                Round Button
+              </ButtonWithVariants>
+            </Appear>
+            <Appear>
+              <ButtonWithVariants
+                size="small"
+                shape="square"
+                css={{ marginTop: "16px", width: 185 }}
+              >
+                Square Button
+              </ButtonWithVariants>
+            </Appear>
+            <Appear>
+              <ButtonWithVariants size="big" shape="square" css={{ marginTop: "16px", width: 185 }}>
+                Big Round Button
+              </ButtonWithVariants>
+            </Appear>
           </FlexBox>
         </Grid>
       </Slide>
