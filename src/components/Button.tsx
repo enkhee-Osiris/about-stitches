@@ -1,27 +1,24 @@
 import { styled } from "../stitches.config";
 
 const Button = styled("button", {
-  all: "unset",
-
   $$shadow: "rgb(138, 43, 226)",
-  boxShadow: "$$shadow 0px 0px 0px 3px",
 
+  all: "unset",
   backgroundColor: "rgb(43, 47, 49)",
-  borderRadius: "9999px",
+  borderRadius: "12px",
+  boxShadow: "$$shadow 0px 0px 0px 2px",
   color: "#fff",
-  fontSize: "15px",
-  padding: "10px 15px",
+  fontFamily: '"Rubik", sans-serif',
+  fontSize: "20px",
+  padding: "30px 60px",
 
   "&:hover": {
     $$shadow: "rgb(65, 105, 225)",
+    backgroundColor: "rgb(53, 55, 56)",
   },
 
   "&.custom-class": {
     $$shadow: "rgb(30, 45, 225)",
-  },
-
-  "& + button": {
-    marginLeft: "20px",
   },
 });
 

@@ -1,18 +1,14 @@
 import react from "@vitejs/plugin-react";
 
-// import legacyPlugin from "vite-plugin-legacy";
+import svgLoader from "vite-svg-loader";
 
 import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    // legacyPlugin({
-    //   targets: ["> 0.5%", "last 2 versions", "Firefox ESR", "not dead"],
-    //   polyfills: [],
-    //   ignoreBrowserslistConfig: false,
-    //   corejs: true,
-    // }),
     react(),
+    svgLoader({
+      svgo: false,
+    }),
   ],
 });

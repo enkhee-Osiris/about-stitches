@@ -1,3 +1,5 @@
+import buttonStyleUrl from "./codes/button-style.svg?url";
+import { Button, StitchesLogo } from "./components";
 import {
   Appear,
   Box,
@@ -7,12 +9,10 @@ import {
   Grid,
   Heading,
   ListItem,
-  Notes,
   OrderedList,
   Slide,
   Text,
 } from "./spectacle";
-import { Button, Editor, StitchesLogo } from "./components";
 
 const THEME = {
   fonts: {
@@ -21,7 +21,7 @@ const THEME = {
   },
   colors: {
     primary: "#dbdbdb",
-    secondary: "#7828b5",
+    secondary: "#fefefe",
     tertiary: "#151718",
     quaternary: "#7828b5",
     quinary: "#7828b5",
@@ -35,39 +35,6 @@ const THEME = {
   },
   space: [16, 24, 48],
 };
-
-const hehe = String.raw`
-const Button = styled("button", {
-  $$shadow: "yellow",
-  boxShadow: "0 0 0 3px $$shadow",
-
-  backgroundColor: "rgba(255, 255, 255, 0.3)",
-  color: "#fff",
-  borderRadius: "9999px",
-  fontSize: "13px",
-  padding: "10px 15px",
-
-  "&.custom-class": {
-    boxShadow: "blueviolet",
-  },
-
-  "&:hover": {
-    $$shadow: "royalblue",
-  },
-
-  "& + button": {
-    marginLeft: "20px",
-  },
-});
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Button>Button</Button>
-    <Button className="custom-class">Button</Button>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
-`;
 
 function SpectacleTemplate() {
   return (
@@ -250,11 +217,13 @@ function App() {
 
       <Slide>
         <Grid width="100%" gridTemplateColumns="50% 50%" gridTemplateRows="100%" height="100%">
-          <Editor code={hehe} style={{ height: "762px" }} />
+          <img src={buttonStyleUrl} alt="Button Usage Example" height="100%" />
 
-          <FlexBox>
-            <Button>Button</Button>
-            <Button className="custom-class">Button</Button>
+          <FlexBox flexDirection="column">
+            <Button css={{ width: 185 }}>Normal Button</Button>
+            <Button css={{ marginTop: "16px", width: 185 }} className="custom-class">
+              CustomCSS Button
+            </Button>
           </FlexBox>
         </Grid>
       </Slide>

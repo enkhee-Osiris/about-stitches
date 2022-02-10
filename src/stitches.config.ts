@@ -12,6 +12,13 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
       bp1: "(min-width: 480px)",
     },
     utils: {
-      marginX: (value) => ({ marginLeft: value, marginRight: value }),
+      mX: (value: number | string) => ({ marginLeft: value, marginRight: value }),
+      mY: (value: number | string) => ({ marginTop: value, marginBottom: value }),
+      m: (value: number | string) => ({
+        marginTop: value,
+        marginLeft: value,
+        marginBottom: value,
+        marginRight: value,
+      }),
     },
   });

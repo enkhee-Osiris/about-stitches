@@ -11,7 +11,7 @@ module.exports = {
   ],
   rules: {
     "import/extensions": "off",
-    "import/no-unresolved": ["error", { ignore: ["^@/.*$"] }],
+    "import/no-unresolved": ["error", { ignore: ["^.*?url$"] }],
     "import/order": [
       "error",
       {
