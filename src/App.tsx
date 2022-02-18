@@ -3,6 +3,7 @@ import buttonVariantsUrl from "./codes/button-variants.svg?url";
 import buttonResponsive from "./codes/button-responsive.svg?url";
 import buttonCustom from "./codes/button-custom.svg?url";
 import buttonComposed from "./codes/button-composed.svg?url";
+import ssr from "./codes/ssr.svg?url";
 
 import { Button, ButtonWithVariants, ComposedButton, StitchesLogo } from "./components";
 import {
@@ -355,6 +356,27 @@ function App() {
             </Appear>
           </FlexBox>
         </Grid>
+      </Slide>
+
+      <Slide>
+        <FlexBox alignItems="flex-start" flexDirection="column">
+          <Appear>
+            <Heading margin="0px" fontSize="h1" textAlign="left">
+              SSR
+            </Heading>
+          </Appear>
+          <Appear>
+            <Text margin="0px">
+              You can get access to the CSS string by using the <b>getCssText</b> function.
+            </Text>
+          </Appear>
+        </FlexBox>
+
+        <FlexBox flex={1} alignItems="flex-start" flexDirection="column">
+          <Appear>
+            <img src={ssr} alt="SSR Usage Example" width="850px" />
+          </Appear>
+        </FlexBox>
       </Slide>
     </Deck>
   );

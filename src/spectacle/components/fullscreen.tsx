@@ -10,6 +10,10 @@ type FSProps = {
 };
 
 const Container = styled("div")`
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+  }
   @media print {
     display: none;
   }
