@@ -1,7 +1,10 @@
 import buttonStyleUrl from "./codes/button-style.svg?url";
 import buttonVariantsUrl from "./codes/button-variants.svg?url";
 import buttonResponsive from "./codes/button-responsive.svg?url";
-import { Button, ButtonWithVariants, StitchesLogo } from "./components";
+import buttonCustom from "./codes/button-custom.svg?url";
+import buttonComposed from "./codes/button-composed.svg?url";
+
+import { Button, ButtonWithVariants, ComposedButton, StitchesLogo } from "./components";
 import {
   Appear,
   Box,
@@ -292,6 +295,63 @@ function App() {
               >
                 Big on big
               </ButtonWithVariants>
+            </Appear>
+          </FlexBox>
+        </Grid>
+      </Slide>
+
+      <Slide>
+        <Grid width="100%" gridTemplateColumns="50% 50%" gridTemplateRows="100%" height="100%">
+          <Appear>
+            <img
+              src={buttonCustom}
+              alt="Button Usage Example"
+              height="100%"
+              style={{ maxWidth: "100%" }}
+            />
+          </Appear>
+          <FlexBox flexDirection="column">
+            <Appear>
+              <ButtonWithVariants
+                size="small"
+                css={{
+                  $$shadow: "#E8FF63",
+                  backgroundColor: "#0A0A0A",
+                  color: "#FFF",
+                  width: 185,
+                }}
+              >
+                Custom Style
+              </ButtonWithVariants>
+            </Appear>
+            <Appear>
+              <ButtonWithVariants
+                size="small"
+                css={{
+                  $$shadow: "$colors$green",
+                  backgroundColor: "#0A0A0A",
+                  color: "#FFF",
+                  marginTop: "16px",
+                  width: 185,
+                }}
+              >
+                Token Usage
+              </ButtonWithVariants>
+            </Appear>
+          </FlexBox>
+        </Grid>
+      </Slide>
+
+      <Slide>
+        <Grid width="100%" gridTemplateColumns="50% 50%" gridTemplateRows="100%" height="100%">
+          <FlexBox flex={1} justifyContent="center" flexDirection="column">
+            <Appear>
+              <img src={buttonComposed} alt="Button Usage Example" width="100%" />
+            </Appear>
+          </FlexBox>
+          <FlexBox flexDirection="column">
+            <Appear>
+              <ComposedButton>Composed Button</ComposedButton>
             </Appear>
           </FlexBox>
         </Grid>

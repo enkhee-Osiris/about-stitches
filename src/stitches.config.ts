@@ -4,6 +4,7 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
   createStitches({
     theme: {
       colors: {
+        green: "#3acf29",
         gray400: "gainsboro",
         gray500: "lightgray",
       },
