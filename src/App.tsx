@@ -1,5 +1,6 @@
 import buttonStyleUrl from "./codes/button-style.svg?url";
 import buttonVariantsUrl from "./codes/button-variants.svg?url";
+import buttonResponsive from "./codes/button-responsive.svg?url";
 import { Button, ButtonWithVariants, StitchesLogo } from "./components";
 import {
   Appear,
@@ -217,9 +218,9 @@ function App() {
       </Slide>
 
       <Slide>
-        <Grid width="100%" gridTemplateColumns="50% 50%" gridTemplateRows="100%" height="100%">
+        <Grid gridTemplateColumns="50% 50%" gridTemplateRows="100%">
           <Appear>
-            <img src={buttonStyleUrl} alt="Button Usage Example" height="100%" />
+            <img src={buttonStyleUrl} alt="Button Usage Example" width="100%" />
           </Appear>
 
           <FlexBox flexDirection="column">
@@ -238,9 +239,8 @@ function App() {
       <Slide>
         <Grid width="100%" gridTemplateColumns="50% 50%" gridTemplateRows="100%" height="100%">
           <Appear>
-            <img src={buttonVariantsUrl} alt="Button Usage Example" height="100%" />
+            <img src={buttonVariantsUrl} alt="Button Usage Example" width="100%" />
           </Appear>
-
           <FlexBox flexDirection="column">
             <Appear>
               <ButtonWithVariants size="small" shape="round" css={{ width: 185 }}>
@@ -259,6 +259,38 @@ function App() {
             <Appear>
               <ButtonWithVariants size="big" shape="square" css={{ marginTop: "16px", width: 185 }}>
                 Big Round Button
+              </ButtonWithVariants>
+            </Appear>
+          </FlexBox>
+        </Grid>
+      </Slide>
+
+      <Slide>
+        <Grid width="100%" gridTemplateColumns="50% 50%" gridTemplateRows="100%" height="100%">
+          <Appear>
+            <img src={buttonResponsive} alt="Button Usage Example" width="100%" />
+          </Appear>
+          <FlexBox flexDirection="column">
+            <Appear>
+              <ButtonWithVariants
+                shape={{
+                  "@bp3": "round",
+                  "@bp4": "square",
+                }}
+                css={{ width: 185 }}
+              >
+                Square on big
+              </ButtonWithVariants>
+            </Appear>
+            <Appear>
+              <ButtonWithVariants
+                size={{
+                  "@bp3": "small",
+                  "@bp4": "big",
+                }}
+                css={{ marginTop: "16px", width: 185 }}
+              >
+                Big on big
               </ButtonWithVariants>
             </Appear>
           </FlexBox>

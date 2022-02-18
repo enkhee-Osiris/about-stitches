@@ -10,6 +10,9 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
     },
     media: {
       bp1: "(min-width: 480px)",
+      bp2: "(min-width: 640px)",
+      bp3: "(min-width: 768px)",
+      bp4: "(min-width: 1024px)",
     },
     utils: {
       mX: (value: number | string) => ({ marginLeft: value, marginRight: value }),
